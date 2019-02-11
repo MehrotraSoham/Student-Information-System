@@ -1,0 +1,152 @@
+.bg {
+  background-image: url("img2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity:0.8;
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+}
+#nav{
+  color:white;
+  font-size: 20px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    color:white;
+    font-size: 18px;
+  }
+  tbody{
+    
+  }
+  th, td {
+    text-align: left;
+    padding: 21px;
+  }
+  tr:nth-child(even) {
+    background-color: black;
+  }
+
+
+  /* .input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  } */
+
+  /* Style the form icons */
+  .icon {
+    padding: 10px;
+    background: #214f99;
+    color: white;
+    min-width: 20px;
+    text-align: center;
+  }
+  .icon1 {
+    padding: 10px;
+    background: #38938a;
+    color: white;
+    min-width: 20px;
+    text-align: center;
+  }
+
+  .btn {
+    background-color: inherit;
+    color: white;
+    border: 2px solid Gray;
+    padding: 16px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    width: 100;
+    border-radius: 8px;
+    left: 120px;
+  }
+  .success {
+    color: white;
+  }
+
+  .success:hover {
+    background-color: #0d2844;
+    color: white;
+  }
+
+  #one{
+      margin-top: 100px;
+      width: 100%;
+      margin-left: 40%;
+  }
+
+ /* The sidepanel menu */
+.sidepanel {
+  height: 250px; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 500px;
+  background-color: #0d2844; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: inherit;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: relative;
+  left: 500px;
+  bottom: 5px;
+  opacity: 0.9;
+}
+
+.openbtn:hover {
+opacity: 1;
+}
+
+h2{
+  color:white;
+  text-align: center;
+  position: relative;
+  top: 10px;
+  font-size: 30px;
+}

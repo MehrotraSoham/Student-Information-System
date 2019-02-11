@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="admin.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>Admin Dashboard</title>
+</head>
+<body>
+  <div class = "bg">
+    <h2>Admin Dashboard</h2>
+
+    <div style="position: relative;margin-top: -50px;margin-left: 1190px;width: 100%">
+        <div id="mySidepanel" class="sidepanel" style="position:absolute;margin-left: -50px">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+          </div>
+      <button class="openbtn" onclick="openNav()">&#9776; Notification</button>
+    </div>
+    <br><br>
+    <table>
+      <tbody>
+        <tr id = "nav">
+          <th>First Name</th>
+          <th>User Name</th>
+          <th>Email</th>
+          <th>Contact</th>
+          <th>Age</th>
+          <th>CGPA</th>
+          <th>Department</th>
+          <th>Semester</th>
+          <th>Update/Delete</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>soham355@gmail.com</td>
+          <td>8601760949</td>
+          <td>21</td>
+          <td>8.5</td>
+          <td>IT</td>
+          <td>6th</td>
+          <td><i class="fas fa-pen-alt icon"></i><i class="fas fa-trash-alt icon1"></i></td>
+
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>soham355@gmail.com</td>
+          <td>8601760949</td>
+          <td>21</td>
+          <td>8.5</td>
+          <td>IT</td>
+          <td>6th</td>
+          <td><i class="fas fa-pen-alt icon"></i><i class="fas fa-trash-alt icon1"></i></td>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>soham355@gmail.com</td>
+          <td>8601760949</td>
+          <td>21</td>
+          <td>8.5</td>
+          <td>IT</td>
+          <td>6th</td>
+          <td><i class="fas fa-pen-alt icon"></i><i class="fas fa-trash-alt icon1"></i></td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="one">
+
+        <button class="btn success">LOGOUT</button>
+    </div>
+  </div>
+
+<script>
+  function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+
+</body>
+</html>
