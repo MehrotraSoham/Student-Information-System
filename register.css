@@ -55,10 +55,19 @@ h2{
   transition-duration: 0.4s;
   cursor: pointer;
   position: relative;
-  top:250px;
-  left:800px;
   width:100;
   border-radius: 8px;
+}
+
+#reg_btn{
+  top:250px;
+  left:800px;
+}
+
+#res_btn{
+  position: absolute;
+  top:10px;
+  left:1700px;
 }
 
 .btn:hover {

@@ -1,6 +1,7 @@
 var flag;
 
-if (performance.navigation.type == 1) {
+// if (performance.navigation.type == 1) {
+function reset(){
   document.getElementById('form').reset();
 }
 
@@ -26,18 +27,18 @@ function want_admin() {
 
 function validateEmail(email){
     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-    var x = document.forms["form"]["email"];
-    if(email==""){
-      x.setCustomValidity("Please fill out this field.");
+    // var x = document.forms["form"]["email"];
+    if(email.value==""){
+      email.setCustomValidity("Please fill out this field.");
       return false;
     }
-    if (reg.test(email) == false)
+    if (reg.test(email.value) == false)
     {
-        x.setCustomValidity("Invalid Email");
+        email.setCustomValidity("Invalid Email");
         return false;
     }
     else {
-      x.setCustomValidity("");
+      email.setCustomValidity("");
     }
     return true;
 }
@@ -56,17 +57,17 @@ function validatePassword() {
 
 function validateContact(contact){
     var reg = /^[0-9]{10}$/;
-    var x = document.forms["form"]["number"];
-    if(contact==""){
-      x.setCustomValidity("Please fill out this field.");
+    // var x = document.forms["form"]["number"];
+    if(contact.value==""){
+      contact.setCustomValidity("Please fill out this field.");
       return false;
     }
-    if (reg.test(contact) == false)
+    if (reg.test(contact.value) == false)
     {
-        x.setCustomValidity("Invalid Contact (10 digits required)");
+        contact.setCustomValidity("Invalid Contact (10 digits required)");
         return false;
     }
-    x.setCustomValidity("");
+    contact.setCustomValidity("");
     return true;
 }
 
@@ -74,17 +75,17 @@ function validateAge(age){
     if (flag == 1)
       return true;
     var reg = /^[0-9]{1,2}$/;
-    var x = document.forms["form"]["age"];
-    if(age==""){
-      x.setCustomValidity("Please fill out this field.");
+    // var x = document.forms["form"]["age"];
+    if(age.value==""){
+      age.setCustomValidity("Please fill out this field.");
       return false;
     }
-    if (reg.test(age) == false || age=='0' || age=="00")
+    if (reg.test(age.value) == false || age.value=='0' || age.value=="00")
     {
-        x.setCustomValidity("Invalid Age");
+        age.setCustomValidity("Invalid Age");
         return false;
     }
-    x.setCustomValidity("");
+    age.setCustomValidity("");
     return true;
 }
 
@@ -93,29 +94,29 @@ function validateCGPA(cgpa){
       return true;
 
     var reg = /^([0-9])+\.+[0-9]$/;
-    var x = document.forms["form"]["cgpa"];
-    if(cgpa==""){
-      x.setCustomValidity("Please fill out this field.");
+    // var x = document.forms["form"]["cgpa"];
+    if(cgpa.value==""){
+      cgpa.setCustomValidity("Please fill out this field.");
       return false;
     }
-    if (reg.test(cgpa) == false)
+    if (reg.test(cgpa.value) == false)
     {
-        x.setCustomValidity("Invalid CGPA, Format Example: 9.0");
+        cgpa.setCustomValidity("Invalid CGPA, Format Example: 9.0");
         return false;
     }
-    x.setCustomValidity("");
+    cgpa.setCustomValidity("");
     return true;
 }
 
 function validateForm(){
   var email = document.forms["form"]["email"];
-  var email_returned = validateEmail(email.value);
+  var email_returned = validateEmail(email);
   if(email_returned == false){
     email.innerHTML="";
     return false;
   }
 
-  var contact = document.forms["form"]["number"].value;
+  var contact = document.forms["form"]["number"];
   var contact_returned = validateContact(contact);
   if(contact_returned == false)
     return false;
@@ -124,12 +125,12 @@ function validateForm(){
   if(password_returned == false)
     return false;
 
-  var age = document.forms["form"]["age"].value;
+  var age = document.forms["form"]["age"];
   var age_returned = validateAge(age);
   if(age_returned == false)
     return false;
 
-  var cgpa = document.forms["form"]["cgpa"].value;
+  var cgpa = document.forms["form"]["cgpa"];
   var cgpa_returned = validateCGPA(cgpa);
   if(cgpa_returned == false)
     return false;
