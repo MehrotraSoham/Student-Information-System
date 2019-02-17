@@ -1,22 +1,13 @@
 var flag;
 
-if (performance.navigation.type == 1) {
-  reset();
+function loadFile(event){
+  var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
 }
+
 function reset(){
   document.getElementById('form').reset();
-  var email = document.forms["form"]["email"];
-  email.style.background="white";
-  var number = document.forms["form"]["number"];
-  number.style.background="white";
-  var pass1 = document.getElementById("password");
-  var pass2 = document.getElementById("password_confirmation");
-  pass1.style.background="white";
-  pass2.style.background="white";
-  var age = document.forms["form"]["age"];
-  age.style.background="white";
-  var cgpa = document.forms["form"]["cgpa"];
-  cgpa.style.background="white";
+  window.location.reload();
 }
 
 function want_admin() {
@@ -92,6 +83,27 @@ function validateContact(contact){
     }
     contact.setCustomValidity("");
     contact.style.background="#ccffcc";
+    return true;
+}
+
+function validateRoll(roll){
+    if (flag == 1)
+      return true;
+    var reg = /^([0-9]{2})+([A-Z]{2})+([0-9]{4})$/;
+    // var x = document.forms["form"]["age"];
+    if(roll.value==""){
+      roll.style.background="#e88f91";
+      roll.setCustomValidity("Please fill out this field.");
+      return false;
+    }
+    if (reg.test(roll.value) == false)
+    {
+        roll.style.background="#e88f91";
+        roll.setCustomValidity("Invalid Roll Number, Format:16IT8035");
+        return false;
+    }
+    roll.style.background="#ccffcc";
+    roll.setCustomValidity("");
     return true;
 }
 
@@ -180,6 +192,11 @@ function validateForm(){
   var age = document.forms["form"]["age"];
   var age_returned = validateAge(age);
   if(age_returned == false)
+    return false;
+
+  var roll = document.forms["form"]["roll"];
+  var roll_returned = validateRoll(roll);
+  if(roll_returned == false)
     return false;
 
   var cgpa = document.forms["form"]["cgpa"];

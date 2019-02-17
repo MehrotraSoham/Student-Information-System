@@ -30,6 +30,10 @@
               <i class="fas fa-phone-square icon"></i>
               <input class="input-field" type="text" placeholder="Contact Number" name="number" id="number" onblur="validateContact(number)" required>
             </div>
+            <!-- <p class="detail">Address</p>
+            <div>
+              <textarea rows="4" cols="77" placeholder="Your Address goes here....."></textarea>
+            </div> -->
             <div class="input-container">
               <i class="fa fa-key icon"></i>
               <input class="input-field" type="password" placeholder="Password" name="psw" id="password" required>
@@ -38,7 +42,11 @@
               <i class="fa fa-key icon"></i>
               <input class="input-field" type="password" placeholder="Confirm Password" name="psw" id="password_confirmation" onblur="validatePassword()" required>
             </div>
-            <br>
+            <label class = "mylabel">
+              <button class = "btn btn-5"> Upload Image</button>
+              <input type = "file" accept="image/*" name="image" id="image" onchange="loadFile(event)">
+              <p id = "repost"><img id="output" width="140" /></p>
+            </label>
             <div>
               <input type="checkbox" name="admin" value="Admin" id="myCheck" onclick="want_admin()"> <span class="detail" id="admin">I Want To Be An Admin</span><br>
             </div>
@@ -53,16 +61,18 @@
           <!-- <form action="/action_page.php"> -->
             <div class="input-container">
               <i class="fas fa-pager icon"></i>
+              <input class="input-field" type="text" placeholder="Roll Number" name="roll" id="roll" onblur="validateRoll(roll)"required>
+            </div>
+            <div class="input-container">
+              <i class="fas fa-pager icon"></i>
               <input class="input-field" type="text" placeholder="Age" name="age" id="age" onblur="validateAge(age)"required>
             </div>
             <div class="input-container">
               <i class="fas fa-marker icon"></i>
               <input class="input-field" type="text" placeholder="CGPA" name="cgpa" id="cgpa" onblur="validateCGPA(cgpa)" required>
             </div>
-            <p class="detail">Address</p>
-            <div>
-              <textarea rows="4" cols="77" placeholder="Your Address goes here....."></textarea>
-            </div>
+            <br>
+
             <div>
                 <p class="detail">Department</p>
                 <select class="dropdown" name="cars" style="width: 200px">
